@@ -5,7 +5,7 @@ use Livro\Widgets\Container\HBox;
 /**
  * Vendas por mês
  */
-class DashboardConta extends Page
+class aDashboardConta extends Page
 {
     /**
      * método construtor
