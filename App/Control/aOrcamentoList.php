@@ -69,7 +69,7 @@ class aOrcamentoList extends Page
         $this->datagrid->addColumn($asdf);
 
         $this->datagrid->addAction('PDF',  new Action([new aOrcamentoReport, 'onGera']), 'id', 'fa fa-print fa-lg blue');
-        $this->datagrid->addAction('PDF',  new Action([new aOrcamentoForm, 'onEdit']), 'id', 'fa fa-edit fa-lg blue');
+        $this->datagrid->addAction('Editar',  new Action([new aOrcamentoForm, 'onEdit']), 'id', 'fa fa-edit fa-lg blue');
         $this->datagrid->addAction('Excluir', new Action([$this, 'onDelete']),          'id', 'fa fa-trash fa-lg red');
         // monta a página através de uma caixa
         $box = new VBox;

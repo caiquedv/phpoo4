@@ -23,7 +23,7 @@ class MesChart extends Page
 
         $loader = new Twig_Loader_Filesystem('App/Resources');
         $twig = new Twig_Environment($loader);
-        $template = $twig->loadTemplate('vendas_mes.html');
+        $template = $twig->loadTemplate($class == 'Pagar' ? 'pagar_mes.html' : 'vendas_mes.html');
 
         try {
             // inicia transação com o banco 'livro'
