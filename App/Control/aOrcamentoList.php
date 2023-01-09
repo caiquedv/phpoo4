@@ -60,13 +60,11 @@ class aOrcamentoList extends Page
         $codigo   = new DatagridColumn('id', 'Código', 'center', '10%');
         $nome  = new DatagridColumn('nome', 'Nome', 'left',   '15%');
         $descricao  = new DatagridColumn('descricao', 'Descrição.', 'left', '65%');
-        $asdf  = new DatagridColumn('descricao', 'Descrição.', 'left', '65%');
 
         // adiciona as colunas à Datagrid
         $this->datagrid->addColumn($codigo);
         $this->datagrid->addColumn($nome);
         $this->datagrid->addColumn($descricao);
-        $this->datagrid->addColumn($asdf);
 
         $this->datagrid->addAction('PDF',  new Action([new aOrcamentoReport, 'onGera']), 'id', 'fa fa-print fa-lg blue');
         $this->datagrid->addAction('Editar',  new Action([new aOrcamentoForm, 'onEdit']), 'id', 'fa fa-edit fa-lg blue');
